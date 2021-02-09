@@ -2,7 +2,7 @@
 const clickButton = document.getElementById('display-name-button');
 
 clickButton.addEventListener('click', () => {
-    document.getElementById('display-name').classList = 'alert alert-success';
+    document.getElementById('display-name').classList.remove('invisible'); // = 'alert alert-success';
 });
 
 // Mouse Over
@@ -19,6 +19,7 @@ const toggleButton = document.getElementById('toggle-button');
 
 toggleButton.addEventListener('click', () => {
     document.getElementById('toggle-alert').classList.toggle('invisible');
+    toggleButton.innerHTML === 'Off' ? toggleButton.innerHTML = 'On' : toggleButton.innerHTML = 'Off';
 });
 
 // Validate
